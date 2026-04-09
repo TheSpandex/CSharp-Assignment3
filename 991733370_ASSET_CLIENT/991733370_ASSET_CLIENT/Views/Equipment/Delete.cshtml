@@ -1,0 +1,34 @@
+@model _991733370_ASSET_CLIENT.Models.EquipmentResponse
+@{ ViewData["Title"] = "Delete Equipment"; }
+
+<div class="row justify-content-center mt-3">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-danger">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">Confirm Delete</h5>
+            </div>
+            <div class="card-body">
+                <p>Are you sure you want to remove the following equipment from the system?</p>
+                <table class="table table-bordered">
+                    <tr><th>Asset Tag</th><td><code>@Model.AssetTag</code></td></tr>
+                    <tr><th>Device Name</th><td>@Model.DeviceName</td></tr>
+                    <tr><th>Description</th><td>@(Model.Description ?? "—")</td></tr>
+                    <tr><th>Status</th>
+                        <td>
+                            @if (Model.IsAvailable)
+                            { <span class="badge bg-success">Available</span> }
+                            else
+                            { <span class="badge bg-danger">Checked Out</span> }
+                        </td>
+                    </tr>
+                </table>
+                <div class="d-flex gap-2">
+                    <form asp-action="Delete" asp-route-id="@Model.EquipmentId" method="post">
+                        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                    </form>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

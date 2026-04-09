@@ -1,0 +1,112 @@
+@model List<_991733370_ASSET_CLIENT.Models.EquipmentResponse>
+@{
+    ViewData["Title"] = "Dashboard";
+    var role  = ViewBag.Role as string ?? "";
+    var email = ViewBag.Email as string ?? "";
+    var available  = Model.Count(e => e.IsAvailable);
+    var checkedOut = Model.Count(e => !e.IsAvailable);
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="mb-0">Welcome back, <span class="text-primary">@email</span></h2>
+        <span class="badge @(role == "ITAdmin" ? "bg-warning text-dark" : "bg-success") mt-1">@role</span>
+    </div>
+</div>
+
+<!-- Summary cards -->
+<div class="row g-3 mb-4">
+    <div class="col-sm-4">
+        <div class="card text-white bg-success shadow-sm">
+            <div class="card-body">
+                <h6 class="card-title">Available Assets</h6>
+                <h2 class="mb-0">@available</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-danger shadow-sm">
+            <div class="card-body">
+                <h6 class="card-title">Checked Out</h6>
+                <h2 class="mb-0">@checkedOut</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-secondary shadow-sm">
+            <div class="card-body">
+                <h6 class="card-title">Total Assets</h6>
+                <h2 class="mb-0">@Model.Count</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Equipment Table -->
+<div class="card shadow-sm">
+    <div class="card-header d-flex justify-content-between align-items-center @(role == "ITAdmin" ? "card-header-admin" : "card-header-employee")">
+        <h5 class="mb-0">Equipment Inventory</h5>
+        @if (role == "ITAdmin")
+        {
+            <a asp-controller="Equipment" asp-action="Create" class="btn btn-light btn-sm">+ Add Equipment</a>
+        }
+    </div>
+    <div class="card-body p-0">
+        @if (!Model.Any())
+        {
+            <div class="p-4 text-muted text-center">No equipment found.</div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Asset Tag</th>
+                            <th>Device Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><code>@item.AssetTag</code></td>
+                                <td>@item.DeviceName</td>
+                                <td class="text-muted small">@(item.Description ?? "—")</td>
+                                <td>
+                                    @if (item.IsAvailable)
+                                    {
+                                        <span class="badge bg-success">Available</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Checked Out</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.IsAvailable)
+                                    {
+                                        <form asp-controller="Equipment" asp-action="Checkout"
+                                              asp-route-id="@item.EquipmentId" method="post" class="d-inline">
+                                            <button type="submit" class="btn btn-success btn-sm">Checkout</button>
+                                        </form>
+                                    }
+                                    @if (role == "ITAdmin")
+                                    {
+                                        <a asp-controller="Equipment" asp-action="Edit"
+                                           asp-route-id="@item.EquipmentId" class="btn btn-outline-primary btn-sm ms-1">Edit</a>
+                                        <a asp-controller="Equipment" asp-action="Delete"
+                                           asp-route-id="@item.EquipmentId" class="btn btn-outline-danger btn-sm ms-1">Delete</a>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

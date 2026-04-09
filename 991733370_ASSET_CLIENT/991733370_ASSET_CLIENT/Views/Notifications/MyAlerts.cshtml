@@ -1,0 +1,84 @@
+@model List<_991733370_ASSET_CLIENT.Models.NotificationResponse>
+@{
+    ViewData["Title"] = "Notifications";
+    var role = Context.Session.GetString("UserRole") ?? "";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Notifications</h2>
+    @if (role == "ITAdmin")
+    {
+        <form asp-action="GenerateOverdue" method="post">
+            <button type="submit" class="btn btn-warning">
+                Run Overdue Check
+            </button>
+        </form>
+    }
+</div>
+
+@if (TempData["OverdueResult"] is string overdueResult)
+{
+    <div class="alert alert-info">
+        <strong>Overdue Generation Complete:</strong> @overdueResult
+        @if (TempData["OverdueMessages"] is string msgs && !string.IsNullOrEmpty(msgs))
+        {
+            <ul class="mb-0 mt-2">
+                @foreach (var m in msgs.Split('|'))
+                {
+                    <li>@m</li>
+                }
+            </ul>
+        }
+    </div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-success">You have no notifications.</div>
+}
+else
+{
+    var unread = Model.Where(n => !n.IsRead).ToList();
+    var read   = Model.Where(n => n.IsRead).ToList();
+
+    @if (unread.Any())
+    {
+        <div class="card shadow-sm mb-4 border-warning">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">Unread (@unread.Count)</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @foreach (var n in unread.OrderByDescending(x => x.CreatedAt))
+                {
+                    <div class="list-group-item d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="mb-1 fw-semibold">@n.Message</p>
+                            <small class="text-muted">@n.CreatedAt.ToString("MMM d, yyyy h:mm tt")</small>
+                        </div>
+                        <form asp-action="MarkRead" asp-route-id="@n.NotificationId" method="post" class="ms-3">
+                            <button type="submit" class="btn btn-sm btn-outline-secondary">Mark Read</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    @if (read.Any())
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-light">
+                <h5 class="mb-0 text-muted">Read (@read.Count)</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @foreach (var n in read.OrderByDescending(x => x.CreatedAt))
+                {
+                    <div class="list-group-item text-muted">
+                        <p class="mb-1">@n.Message</p>
+                        <small>@n.CreatedAt.ToString("MMM d, yyyy h:mm tt")</small>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,98 @@
+@model List<_991733370_ASSET_CLIENT.Models.LoanResponse>
+@{ ViewData["Title"] = "All Loans (Admin)"; }
+
+<h2 class="mb-3">All Loans &mdash; Organization Overview</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No loan records found.</div>
+}
+else
+{
+    var active   = Model.Where(l => !l.IsReturned).ToList();
+    var returned = Model.Where(l => l.IsReturned).ToList();
+
+    <div class="row g-3 mb-4">
+        <div class="col-sm-3">
+            <div class="card text-white bg-primary shadow-sm">
+                <div class="card-body py-2">
+                    <small>Total Loans</small>
+                    <h4 class="mb-0">@Model.Count</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card text-white bg-warning shadow-sm">
+                <div class="card-body py-2">
+                    <small class="text-dark">Active</small>
+                    <h4 class="mb-0 text-dark">@active.Count</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card text-white bg-danger shadow-sm">
+                <div class="card-body py-2">
+                    <small>Overdue</small>
+                    <h4 class="mb-0">@active.Count(l => l.ExpectedReturnDate < DateTime.Now)</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card text-white bg-success shadow-sm">
+                <div class="card-body py-2">
+                    <small>Returned</small>
+                    <h4 class="mb-0">@returned.Count</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header card-header-admin">
+            <h5 class="mb-0">All Loan Records</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Loan #</th>
+                        <th>Employee</th>
+                        <th>Asset Tag</th>
+                        <th>Device</th>
+                        <th>Checked Out</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var loan in Model.OrderByDescending(l => l.CheckoutDate))
+                    {
+                        var isOverdue = !loan.IsReturned && loan.ExpectedReturnDate < DateTime.Now;
+                        <tr class="@(isOverdue ? "table-danger" : loan.IsReturned ? "table-light" : "")">
+                            <td>@loan.LoanId</td>
+                            <td class="small">@loan.UserEmail</td>
+                            <td><code>@loan.AssetTag</code></td>
+                            <td>@loan.DeviceName</td>
+                            <td>@loan.CheckoutDate.ToString("MMM d, yyyy")</td>
+                            <td>@loan.ExpectedReturnDate.ToString("MMM d, yyyy")</td>
+                            <td>
+                                @if (loan.IsReturned)
+                                {
+                                    <span class="badge bg-secondary">Returned</span>
+                                }
+                                else if (isOverdue)
+                                {
+                                    <span class="badge bg-danger">Overdue</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning text-dark">Active</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

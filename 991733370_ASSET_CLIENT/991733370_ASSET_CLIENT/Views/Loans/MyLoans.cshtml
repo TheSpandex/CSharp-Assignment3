@@ -1,0 +1,98 @@
+@model List<_991733370_ASSET_CLIENT.Models.LoanResponse>
+@{ ViewData["Title"] = "My Loans"; }
+
+<h2 class="mb-3">My Loans</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">You have no loan records.</div>
+}
+else
+{
+    var active   = Model.Where(l => !l.IsReturned).ToList();
+    var returned = Model.Where(l => l.IsReturned).ToList();
+
+    if (active.Any())
+    {
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Active Loans (@active.Count)</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Loan #</th>
+                            <th>Asset Tag</th>
+                            <th>Device</th>
+                            <th>Checked Out</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var loan in active)
+                        {
+                            var isOverdue = loan.ExpectedReturnDate < DateTime.Now;
+                            <tr class="@(isOverdue ? "table-danger" : "")">
+                                <td>@loan.LoanId</td>
+                                <td><code>@loan.AssetTag</code></td>
+                                <td>@loan.DeviceName</td>
+                                <td>@loan.CheckoutDate.ToString("MMM d, yyyy")</td>
+                                <td>
+                                    @loan.ExpectedReturnDate.ToString("MMM d, yyyy")
+                                    @if (isOverdue)
+                                    {
+                                        <span class="badge bg-danger ms-1">OVERDUE</span>
+                                    }
+                                </td>
+                                <td><span class="badge bg-warning text-dark">Active</span></td>
+                                <td>
+                                    <form asp-controller="Loans" asp-action="Checkin"
+                                          asp-route-id="@loan.LoanId" method="post">
+                                        <button type="submit" class="btn btn-outline-success btn-sm">Return</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+
+    if (returned.Any())
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">Past Loans (@returned.Count)</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Loan #</th>
+                            <th>Asset Tag</th>
+                            <th>Device</th>
+                            <th>Checked Out</th>
+                            <th>Returned</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var loan in returned)
+                        {
+                            <tr>
+                                <td>@loan.LoanId</td>
+                                <td><code>@loan.AssetTag</code></td>
+                                <td>@loan.DeviceName</td>
+                                <td>@loan.CheckoutDate.ToString("MMM d, yyyy")</td>
+                                <td>@(loan.ReturnDate?.ToString("MMM d, yyyy") ?? "—")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+}

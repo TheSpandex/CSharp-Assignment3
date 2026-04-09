@@ -1,0 +1,52 @@
+@model _991733370_ASSET_CLIENT.Models.RegisterViewModel
+@{ ViewData["Title"] = "Register"; Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Create Account</h5>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Error is string err)
+                {
+                    <div class="alert alert-danger">@err</div>
+                }
+
+                <form asp-action="Register" method="post">
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="you@company.com" />
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Min 6 characters" />
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="EmployeeId" class="form-label">Employee ID</label>
+                        <input asp-for="EmployeeId" class="form-control" placeholder="EMP001" />
+                        <span asp-validation-for="EmployeeId" class="text-danger small"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Department" class="form-label">Department</label>
+                        <input asp-for="Department" class="form-control" placeholder="IT / HR / Finance ..." />
+                        <span asp-validation-for="Department" class="text-danger small"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="PhoneNumber" class="form-label">Phone Number <span class="text-muted">(optional)</span></label>
+                        <input asp-for="PhoneNumber" class="form-control" placeholder="+1 555 000 0000" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Register</button>
+                </form>
+            </div>
+            <div class="card-footer text-center small">
+                Already have an account? <a asp-action="Login">Sign in</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

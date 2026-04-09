@@ -1,0 +1,6 @@
+@_991733370_IT_ASSET_API_HostAddress = http://localhost:5010
+
+GET {{_991733370_IT_ASSET_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

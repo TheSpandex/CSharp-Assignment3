@@ -1,6 +1,6 @@
 namespace _991733370_ASSET_CLIENT.Models
 {
-    // ─── Auth / User ───────────────────────────────────────────────────────────
+    // --- Auth / User ---
     public class LoginViewModel
     {
         public string Email { get; set; } = string.Empty;
@@ -33,7 +33,7 @@ namespace _991733370_ASSET_CLIENT.Models
         public List<string> Roles { get; set; } = new();
     }
 
-    // ─── Equipment ─────────────────────────────────────────────────────────────
+    // --- Equipment ---
     public class EquipmentResponse
     {
         public int EquipmentId { get; set; }
@@ -60,7 +60,7 @@ namespace _991733370_ASSET_CLIENT.Models
         public bool? IsAvailable { get; set; }
     }
 
-    // ─── Loans ─────────────────────────────────────────────────────────────────
+    // --- Loans ---
     public class LoanResponse
     {
         public int LoanId { get; set; }
@@ -75,7 +75,7 @@ namespace _991733370_ASSET_CLIENT.Models
         public DateTime? ReturnDate { get; set; }
     }
 
-    // ─── Notifications ─────────────────────────────────────────────────────────
+    // --- Notifications ---
     public class NotificationResponse
     {
         public int NotificationId { get; set; }

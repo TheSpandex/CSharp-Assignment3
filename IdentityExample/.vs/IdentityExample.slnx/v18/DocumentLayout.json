@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\admin\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\admin\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\models\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\models\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|c:\\users\\m_gur\\onedrive\\desktop\\winter 2026\\sheridan\\prog 36944\\week 10\\new\\identityexample\\identityexample\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A74F33F6-21D9-466F-90D6-C0C91231E43B}|IdentityExample\\IdentityExample.csproj|solutionrelative:identityexample\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Update.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\Admin\\Update.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Update.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\Admin\\Update.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T15:33:01.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T15:28:59.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\Admin\\Create.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Admin\\Create.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\Admin\\Create.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T15:22:35.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "IdentityExample\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "IdentityExample\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAUwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T15:16:17.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\User.cs",
+              "RelativeDocumentMoniker": "IdentityExample\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\User.cs",
+              "RelativeToolTip": "IdentityExample\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T15:13:58.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\appsettings.json",
+              "RelativeDocumentMoniker": "IdentityExample\\appsettings.json",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\appsettings.json",
+              "RelativeToolTip": "IdentityExample\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-17T14:55:15.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppIdentityDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\AppIdentityDBContext.cs",
+              "RelativeDocumentMoniker": "IdentityExample\\Models\\AppIdentityDBContext.cs",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\AppIdentityDBContext.cs",
+              "RelativeToolTip": "IdentityExample\\Models\\AppIdentityDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:53:16.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "IdentityExample\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Models\\AppUser.cs",
+              "RelativeToolTip": "IdentityExample\\Models\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:45:52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Program.cs",
+              "RelativeDocumentMoniker": "IdentityExample\\Program.cs",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Program.cs",
+              "RelativeToolTip": "IdentityExample\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:42:41.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T14:41:13.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T14:40:53.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "IdentityExample\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\m_gur\\OneDrive\\Desktop\\Winter 2026\\Sheridan\\PROG 36944\\Week 10\\New\\IdentityExample\\IdentityExample\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "IdentityExample\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T14:33:48.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

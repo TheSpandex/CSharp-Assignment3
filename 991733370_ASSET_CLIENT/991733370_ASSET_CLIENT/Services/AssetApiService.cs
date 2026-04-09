@@ -5,12 +5,8 @@ using System.Text.Json;
 
 namespace _991733370_ASSET_CLIENT.Services
 {
-    /// <summary>
-    /// Centralised service that manages all HTTP calls to the IT Asset API.
-    /// Registered as a singleton so the CookieContainer (and the session cookie
-    /// it holds after login) is shared across all requests for the lifetime of
-    /// the application.
-    /// </summary>
+    // Handles all HTTP calls to the IT Asset API.
+    // Registered as a singleton so the shared CookieContainer keeps the login session alive.
     public class AssetApiService
     {
         private readonly HttpClient _client;
@@ -21,8 +17,7 @@ namespace _991733370_ASSET_CLIENT.Services
         {
             var baseUrl = config["ApiBaseUrl"] ?? "https://localhost:7243";
 
-            // UseCookies = true + shared CookieContainer: the login response
-            // cookie is captured and automatically sent with every subsequent call.
+            // UseCookies = true keeps the login cookie and sends it with every request
             var handler = new HttpClientHandler
             {
                 UseCookies = true,
@@ -35,7 +30,7 @@ namespace _991733370_ASSET_CLIENT.Services
             _client = new HttpClient(handler) { BaseAddress = new Uri(baseUrl) };
         }
 
-        // ─── Auth ─────────────────────────────────────────────────────────────
+        // --- Auth ---
 
         public Task<HttpResponseMessage> RegisterAsync(RegisterViewModel dto)
             => _client.PostAsJsonAsync("/api/account/register", dto);
@@ -46,7 +41,7 @@ namespace _991733370_ASSET_CLIENT.Services
         public Task<HttpResponseMessage> LogoutAsync()
             => _client.PostAsync("/api/account/logout", null);
 
-        // ─── Users ────────────────────────────────────────────────────────────
+        // --- Users ---
 
         public async Task<UserDto?> GetMeAsync()
         {
@@ -65,7 +60,7 @@ namespace _991733370_ASSET_CLIENT.Services
         public Task<HttpResponseMessage> UpdateUserAsync(UpdateUserViewModel dto)
             => _client.PutAsJsonAsync("/api/users/update", dto);
 
-        // ─── Equipment ────────────────────────────────────────────────────────
+        // --- Equipment ---
 
         public async Task<List<EquipmentResponse>?> GetEquipmentAsync()
         {
@@ -90,7 +85,7 @@ namespace _991733370_ASSET_CLIENT.Services
         public Task<HttpResponseMessage> DeleteEquipmentAsync(int id)
             => _client.DeleteAsync($"/api/equipment/{id}");
 
-        // ─── Loans ────────────────────────────────────────────────────────────
+        // --- Loans ---
 
         public Task<HttpResponseMessage> CheckoutAsync(int equipmentId)
             => _client.PostAsync($"/api/checkout/{equipmentId}", null);
@@ -112,10 +107,10 @@ namespace _991733370_ASSET_CLIENT.Services
             return await r.Content.ReadFromJsonAsync<List<LoanResponse>>(_json);
         }
 
-        // ─── Notifications ────────────────────────────────────────────────────
+        // --- Notifications ---
 
-        public async Task<HttpResponseMessage> GenerateOverdueAsync()
-            => await _client.PostAsync("/api/notifications/generateoverdue", null);
+        public Task<HttpResponseMessage> GenerateOverdueAsync()
+            => _client.PostAsync("/api/notifications/generate-overdue", null);
 
         public async Task<List<NotificationResponse>?> GetMyAlertsAsync()
         {
@@ -127,7 +122,7 @@ namespace _991733370_ASSET_CLIENT.Services
         public Task<HttpResponseMessage> MarkReadAsync(int id)
             => _client.PutAsync($"/api/notifications/{id}/read", null);
 
-        // ─── Helper ───────────────────────────────────────────────────────────
+        // --- Helpers ---
 
         public async Task<string?> ReadErrorAsync(HttpResponseMessage response)
         {
